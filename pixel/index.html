@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PIXEL CALC - BLUE & PINK</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="hearts">♥ ★ ♥ ★ ♥</div>
+<div class="wrap">
+  <h1>PIXEL <span>CALC</span></h1>
+  <p class="subtitle">BLUE & PINK EDITION</p>
+  <div class="calc" id="calcBox">
+    <div class="screen" id="screen">
+      <div id="history-preview"></div>
+      <div id="display">0</div>
+    </div>
+    <div class="grid">
+      <button class="clear" onclick="pressBtn(this,'clear'); clearAll()">C</button>
+      <button class="del" onclick="pressBtn(this,'del'); delChar()">DEL</button>
+      <button class="op" onclick="pressBtn(this,'op'); addOp('%')">%</button>
+      <button class="op" onclick="pressBtn(this,'op'); addOp('/')">/</button>
+      <button class="num" onclick="pressBtn(this,'num'); addNum('7')">7</button>
+      <button class="num" onclick="pressBtn(this,'num'); addNum('8')">8</button>
+      <button class="num" onclick="pressBtn(this,'num'); addNum('9')">9</button>
+      <button class="op" onclick="pressBtn(this,'op'); addOp('*')">X</button>
+      <button class="num" onclick="pressBtn(this,'num'); addNum('4')">4</button>
+      <button class="num" onclick="pressBtn(this,'num'); addNum('5')">5</button>
+      <button class="num" onclick="pressBtn(this,'num'); addNum('6')">6</button>
+      <button class="op" onclick="pressBtn(this,'op'); addOp('-')">-</button>
+      <button class="num" onclick="pressBtn(this,'num'); addNum('1')">1</button>
+      <button class="num" onclick="pressBtn(this,'num'); addNum('2')">2</button>
+      <button class="num" onclick="pressBtn(this,'num'); addNum('3')">3</button>
+      <button class="op" onclick="pressBtn(this,'op'); addOp('+')">+</button>
+      <button class="num zero" onclick="pressBtn(this,'num'); addNum('0')">0</button>
+      <button class="num" onclick="pressBtn(this,'num'); addNum('.')">.</button>
+      <button class="equal" onclick="pressBtn(this,'equal'); calculate()">=</button>
+    </div>
+    <div class="bottom-row">
+      <button class="history-btn" onclick="pressBtn(this,'op'); toggleHistory()">♥ HISTORY</button>
+      <button class="sound-btn" id="soundBtn" onclick="toggleSound()">SOUND: ON</button>
+    </div>
+    <div id="history-panel" class="history-panel hidden">
+      <p class="history-title">PAST CALCULATIONS</p>
+      <ul id="history-list"></ul>
+      <p id="empty-msg">No history yet...</p>
+      <button class="clear-history-btn" onclick="pressBtn(this,'clear'); clearHistory()">CLEAR HISTORY</button>
+    </div>
+  </div>
+  <p class="footer">PRESS START TO CALCULATE ♥</p>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
